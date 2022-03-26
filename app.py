@@ -1,4 +1,5 @@
 from input_handler import InputHandler
+from logic_gates import binary_adder
 
 
 class App():
@@ -12,7 +13,8 @@ class App():
 
     def add(self):
         num1, num2, = self.inputObject.userInput()
-        print(num1, num2)
+        res = binary_adder(num1, num2)
+        print(f"{num1} + {num2} = {int(res,2)}")
 
 
 if __name__ == "__main__":
